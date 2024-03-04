@@ -1,0 +1,18 @@
+<% include ./partials/header.ejs %>
+
+    <div class="container py-3">
+      <div class="card" style="width: 18rem">
+        <img src="<%= user.image %>" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title"><%= user.username %></h5>
+          <a href="mailto:<%= user.email %>" class=" text-primary "><%= user.email %></a>
+          <br>
+          <a href="/allUsers" class="btn btn-primary">See All Users</a>
+          <a href="/createPost" class="btn btn-success">Post</a>
+
+        </div>
+      </div>
+    </div>
+
+<% include ./partials/footer.ejs %>
+   

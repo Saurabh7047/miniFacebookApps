@@ -1,0 +1,28 @@
+<% include ./partials/header.ejs %>
+
+<div class="d-flex gap-3 mx-3 p-3">
+  <% users.forEach((user)=>{ %>
+  <div class="card" style="width: 18rem">
+    <img
+      src="<%= user.image %>"
+      class="card-img-top"
+      style="height: 250px"
+      alt="..."
+    />
+    <div class="card-body">
+      <h5 class="card-title"><%= user.username %></h5>
+      <a href="mailto:<%= user.email %>" class="text-primary"
+        ><%= user.email %></a
+      >
+      <br />
+      <a href="/profile/<%= user._id %>" class="btn btn-primary">visit Profile</a>
+      <a href="/edit/<%= user._id %>" class="btn btn-warning">Edit profile</a>
+      <a href="/delete/<%= user._id %>" class="btn btn-danger">Delete</a>
+
+    </div>
+  </div>
+
+  <% }) %>
+</div>
+
+<% include ./partials/footer.ejs %>

@@ -1,0 +1,25 @@
+<% include ./partials/header.ejs %>
+
+    <div class="container py-3">
+      <h1 class="fs-3">Update Form</h1>
+      <br>
+    <form action="/update/<%= user._id %>" method="post">
+      <div class="mb-3">
+        <label for="exampleInputUsername" class="form-label">Username</label>
+        <input type="text" name="username" class="form-control" id="exampleInputUsername" value="<%= user.username %>" >
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Email address</label>
+        <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="<%= user.email %>">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Image</label>
+        <input type="text" name="image" class="form-control" id="exampleInputPassword1" value="<%= user.image%>">
+      </div>
+      
+      <button type="submit" class="btn btn-warning">Update details</button>
+
+    </form>
+    </div>
+
+    <% include ./partials/footer.ejs %>
